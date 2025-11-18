@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Servicios – Oswaldo</title>
+    <title>Mi portafolio</title>
 
     <style>
         body {
@@ -11,48 +11,48 @@
             font-family: 'Inter', sans-serif;
             background-color: #0d0d0d;
             color: #ffffff;
+            scroll-behavior: smooth;
         }
 
         header {
-            padding: 40px 20px;
+            padding: 80px 20px;
             text-align: center;
+            animation: fadeIn 1.5s ease;
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: 700;
             margin-bottom: 10px;
-            color: #ffffff;
         }
 
         h2 {
-            font-size: 28px;
+            font-size: 32px;
             margin-top: 50px;
             margin-bottom: 10px;
             text-align: center;
-            color: #ffffff;
         }
 
         p {
             color: #d4d4d4;
             font-size: 17px;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
             text-align: center;
         }
 
         .section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #1a1a1a;
+            padding: 70px 20px;
         }
 
+        /* Tarjetas */
         .services-container, .projects-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            max-width: 800px;
-            margin: 30px auto;
+            gap: 25px;
+            max-width: 850px;
+            margin: 35px auto;
         }
 
         .card {
@@ -61,10 +61,11 @@
             border-radius: 12px;
             border: 1px solid #222;
             transition: 0.3s;
+            animation: fadeUp 1s ease;
         }
 
         .card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             border-color: #555;
         }
 
@@ -74,9 +75,10 @@
             font-size: 22px;
         }
 
+        /* Botón */
         .cta-btn {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 25px;
             padding: 14px 26px;
             background-color: white;
             color: black;
@@ -88,6 +90,17 @@
 
         .cta-btn:hover {
             opacity: 0.8;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         footer {
@@ -103,66 +116,61 @@
 
 <header>
     <h1>Oswaldo Arroyo</h1>
-    <p>Desarrollador de software | Páginas web | Apps | Automatización | Soluciones rápidas</p>
+    <p>Desarrollador de software | Web | Apps | Automatización | Soluciones digitales</p>
 </header>
 
+<!-- SOBRE MI -->
+<section class="section" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+        Soy un desarrollador joven con experiencia creando páginas web,
+        aplicaciones, formularios y herramientas automatizadas.  
+        Me especializo en soluciones rápidas, modernas y funcionales.  
+        Trabajo 100% desde móvil y entrego resultados profesionales.
+    </p>
+</section>
+
+<!-- SERVICIOS -->
 <section class="section" id="servicios">
-    <h2>Servicios que ofrezco</h2>
-    <p>Puedo ayudarte con trabajos rápidos, funcionales y profesionales realizados desde cero.</p>
+    <h2>Servicios</h2>
+    <p>Puedo ayudarte con trabajos funcionales, rápidos y profesionales.</p>
 
     <div class="services-container">
-        <div class="card">
-            <h3>✔ Formularios profesionales</h3>
-            <p>Formularios limpios y funcionales para escuelas, negocios o tareas.</p>
-        </div>
-
-        <div class="card">
-            <h3>✔ Programas que hacen tareas específicas</h3>
-            <p>Pequeños sistemas: cálculos, reportes, automatización, procesos, etc.</p>
-        </div>
-
-        <div class="card">
-            <h3>✔ Páginas Web modernas</h3>
-            <p>Landing pages, portafolios, páginas informativas.</p>
-        </div>
-
-        <div class="card">
-            <h3>✔ Apps en GoodBarber</h3>
-            <p>Edición, actualización y personalización completa de apps.</p>
-        </div>
-
-        <div class="card">
-            <h3>✔ Mini videojuegos</h3>
-            <p>Proyectos simples realizados en JS o herramientas web para diversión o clase.</p>
-        </div>
+        <div class="card"><h3>✔ Formularios profesionales</h3><p>Diseños limpios para escuelas, tareas o negocios.</p></div>
+        <div class="card"><h3>✔ Programas útiles</h3><p>Herramientas que realizan funciones automáticas.</p></div>
+        <div class="card"><h3>✔ Páginas web modernas</h3><p>Landing pages, portafolios y páginas informativas.</p></div>
+        <div class="card"><h3>✔ Apps GoodBarber</h3><p>Mejoras, actualizaciones y mantenimiento.</p></div>
+        <div class="card"><h3>✔ Mini videojuegos</h3><p>Juegos simples en JavaScript para clases o tareas.</p></div>
     </div>
 </section>
 
+<!-- PROYECTOS -->
 <section class="section" id="proyectos">
     <h2>Proyectos</h2>
-    <p>Estos son ejemplos reales de proyectos que puedo entregar.</p>
+    <p>Ejemplos reales de lo que puedo entregar.</p>
 
     <div class="projects-container">
-        <div class="card"><h3>Formulario Escolar</h3><p>Formulario moderno para tareas o administración escolar.</p></div>
-        <div class="card"><h3>Generador Automático de Reportes</h3><p>Herramienta rápida para procesar datos.</p></div>
-        <div class="card"><h3>Landing Page Profesional</h3><p>Diseño moderno tipo Apple.</p></div>
-        <div class="card"><h3>App GoodBarber completa</h3><p>Actualización y ajustes personalizados.</p></div>
+        <div class="card"><h3>Formulario Escolar</h3><p>Formulario moderno y fácil de llenar.</p></div>
+        <div class="card"><h3>Generador de Reportes</h3><p>Sistema que procesa datos rápido.</p></div>
+        <div class="card"><h3>Landing Page Profesional</h3><p>Diseño elegante estilo Apple.</p></div>
+        <div class="card"><h3>App GoodBarber</h3><p>Edición completa y mejoras visuales.</p></div>
     </div>
 </section>
 
+<!-- CONTACTO -->
 <section class="section" id="contacto">
     <h2>Contacto</h2>
-    <p>Si necesitas algo, contáctame y puedo empezar hoy mismo.</p>
+    <p>Listo para ayudarte hoy mismo.</p>
 
     <p>
-        <a class="cta-btn" href="https://wa.me/52 55 6225 7235" target="_blank">
-            Escribir por WhatsApp
+        <a class="cta-btn" href="https://wa.me/+52 55 6225 7235" target="_blank">
+            Contáctame por WhatsApp
         </a>
     </p>
 </section>
 
 <footer>
-    © 2025 – Portafolio de Oswaldo | Construido 100% desde un teléfono móvil.
+    © 2025 – Portafolio de Oswaldo | Hecho desde un teléfono.
 </footer>
 
 </body>
